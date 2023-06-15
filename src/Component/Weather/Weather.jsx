@@ -246,7 +246,7 @@ const Weather = () => {
           </div>
         </div>
 
-        {!loader && (
+        {!loader && !cityNotFoundError && (
           <div className="flex justify-center">
             <label className="label cursor-pointer">
               <input
