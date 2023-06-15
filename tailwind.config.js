@@ -14,6 +14,7 @@ module.exports = {
       orange: "#ff7849",
       green: "#13ce66",
       yellow: "#ffc82c",
+      red: "#ff4949",
       "gray-dark": "#273444",
       gray: "#8492a6",
       "gray-light": "#d3dce6",
@@ -68,7 +69,7 @@ module.exports = {
     height: {
       "35rem": "35rem",
       "100vh": "100vh",
-      screen: "100vh", //100vh means 100% of the viewport height. for width we can use 100vw
+      screen: "100vh", //100vh means 100% of the viewport height. for width we can use 100vw, 
     },
   },
 

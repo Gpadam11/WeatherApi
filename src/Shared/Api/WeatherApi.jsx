@@ -1,5 +1,6 @@
 import { weatherKey, weatherURL } from "../../Config/WeatherConfig";
 import axios from "axios";
+
 export const getWeatherDetails = async (cityName) => {
   try {
     const url =
@@ -8,7 +9,7 @@ export const getWeatherDetails = async (cityName) => {
     return weatherData;
   } catch (error) {
     console.error("CATCH ERROR", error.message);
-    return error;
+    throw new Error("Location not found");
   }
 };
 
@@ -19,6 +20,6 @@ export const getWeatherDayForecast = async (cityName) => {
     return weatherData;
   } catch (error) {
     console.error("CATCH FORECAST ERROR", error.message);
-    return error;
+    throw new Error("Location not found");
   }
 };
