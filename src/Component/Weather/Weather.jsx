@@ -150,6 +150,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {
   getWeatherDetails,
@@ -185,6 +186,12 @@ const Weather = () => {
     },
     current: {},
   });
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      getCurrentWeatherHandler();
+    }
+  };
 
   const [loader, setLoader] = useState(true);
   const [cityNotFoundError, setCityNotFoundError] = useState(false);
@@ -239,6 +246,7 @@ const Weather = () => {
             onChange={cityNameHandler}
             value={cityname}
             type="text"
+            onKeyPress={handleKeyPress}
           />
 
           <div className="p-2">
